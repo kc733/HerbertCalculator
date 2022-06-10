@@ -58,6 +58,7 @@ public class frame extends JFrame implements ActionListener {
 			// -----------------------------------------WORK
 			
 			
+			//---------------- like image -----------------------//
 			// create label for image
 			imgLabel = new JLabel();
 			imgLabel.setBounds(160, 60, 150, 150);
@@ -78,6 +79,8 @@ public class frame extends JFrame implements ActionListener {
 			// set resized image to image icon
 			likeIcon = new ImageIcon(dimg);
 			imgLabel.setIcon(likeIcon);
+			
+			//---------------- /like image -----------------------//
 			
 			
 			
