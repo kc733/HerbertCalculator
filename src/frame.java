@@ -16,23 +16,12 @@ import javax.swing.JPanel;
 import javax.swing.border.Border;
 
 public class frame extends JFrame implements ActionListener {
-
-	JPanel headPanel;
-	JLabel headLabel;
-	JLabel imgLabel;
-	ImageIcon likeIcon;
-	
-	JLabel stImgLabel1;
-	JLabel stImgLabel2;
-	ImageIcon stIcon1;
-	ImageIcon stIcon2;
-	
 	
 		frame() {
 			
 			//--------------- frame options ----------------------------//
 			this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			this.setTitle("Herbert's Mage Death Calculator");
+			this.setTitle("kc733 Galleryr");
 			this.setSize(500, 500);
 			this.setResizable(false);
 			this.setLocationRelativeTo(null); 
@@ -46,48 +35,11 @@ public class frame extends JFrame implements ActionListener {
 			headPanel.setBorder(headBorder);
 			headPanel.setBackground(new Color(255, 255, 255));
 			
-			headLabel = new JLabel("HERBERT'S MAGE DEATH CALCULATOR");
+			headLabel = new JLabel("kc733 Gallery");
 			headLabel.setForeground(new Color(255, 201, 201));
 			headLabel.setFont(new Font("Helvetica", Font.BOLD, 22));
 			
-			// ---------------------------------- work on this 
-			stImgLabel1 = new JLabel();
-			stImgLabel1.setBounds(10, 0, 150, 150);
-			stImgLabel1.setOpaque(true);
-			stImgLabel1.setForeground(Color.white);
-			// -----------------------------------------WORK
-			
-			
-			//---------------- like image -----------------------//
-			// create label for image
-			imgLabel = new JLabel();
-			imgLabel.setBounds(160, 60, 150, 150);
-			imgLabel.setOpaque(true);
-			
-			// make a buffered image to resize image
-			BufferedImage bufLikeImg = null;
-			
-			try {
-				bufLikeImg = ImageIO.read(new File("C:\\Users\\herhe\\eclipse-workspace\\HerbertCalculator\\src\\like.jpg"));
-			} catch (IOException e) {
-			    e.printStackTrace();
-			}
-			
-			Image dimg = bufLikeImg.getScaledInstance(imgLabel.getWidth(), imgLabel.getHeight(),
-			        Image.SCALE_SMOOTH);
-			
-			// set resized image to image icon
-			likeIcon = new ImageIcon(dimg);
-			imgLabel.setIcon(likeIcon);
-			
-			//---------------- /like image -----------------------//
-			
-			
-			
-			//-------------------------------------------- adds
 			headPanel.add(headLabel);
-			// this.setIconImage(likeIcon.getImage());
-			this.add(imgLabel);
 			this.add(headPanel);
 			this.setVisible(true);
 	}
